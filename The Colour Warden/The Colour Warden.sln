@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The Colour Warden.CSharp.Plugins", "The Colour Warden.CSharp.Plugins.csproj", "{8A2516D2-E8CB-C8AA-1225-5A50B0566269}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The Colour Warden.CSharp", "The Colour Warden.CSharp.csproj", "{9A9CAF06-4398-8803-6517-9EC592751F14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The Colour Warden.CSharp.Editor", "The Colour Warden.CSharp.Editor.csproj", "{14AF98E2-1230-7BC4-7687-C97C64D51F4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{8A2516D2-E8CB-C8AA-1225-5A50B0566269}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A2516D2-E8CB-C8AA-1225-5A50B0566269}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A2516D2-E8CB-C8AA-1225-5A50B0566269}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A9CAF06-4398-8803-6517-9EC592751F14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A9CAF06-4398-8803-6517-9EC592751F14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A9CAF06-4398-8803-6517-9EC592751F14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A9CAF06-4398-8803-6517-9EC592751F14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14AF98E2-1230-7BC4-7687-C97C64D51F4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14AF98E2-1230-7BC4-7687-C97C64D51F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14AF98E2-1230-7BC4-7687-C97C64D51F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14AF98E2-1230-7BC4-7687-C97C64D51F4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
