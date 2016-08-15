@@ -2,13 +2,15 @@
 
 public class ShootForce : MonoBehaviour
 {
-    private Color32 bulletColour;
-    public Color32 GetBulletColour() { return bulletColour; }
-    public void SetBulletColour(Color32 newBulletColour) { bulletColour = newBulletColour; }
+    public Color32 BulletColourGetSet
+    {
+        private get { return GetComponent<Renderer>().material.GetColor("_Color"); }
+        set { GetComponent<Renderer>().material.SetColor("_Color", value); }
+    }
     void Start()
     {
         Renderer renderer = GetComponent<Renderer>();
-        renderer.material.SetColor("_Color", GetBulletColour());
+        renderer.material.SetColor("_Color", BulletColourGetSet);
         Launch();
     }
         
@@ -31,7 +33,7 @@ public class ShootForce : MonoBehaviour
         neonController = collidedTransform.GetComponent<INeon>();
         if (neonController != null)
         {
-            neonController.UpdateRenderer(GetComponent<Renderer>().material.GetColor("_Color"));
+            neonController.UpdateRenderer(BulletColourGetSet);
         }
     }
 

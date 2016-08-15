@@ -3,19 +3,21 @@ using System.Collections;
 
 public class CollisionDetections : MonoBehaviour
 {
-    Color32 objectColour;
-    Color32 currentColour;
-    Transform m_CollidedObject;
-    void OnCollisionEnter(Collision collisionTransform)
+    private Color32 ColourGetSet
     {
-        m_CollidedObject = collisionTransform.transform;
-        currentColour = GetRendererColour();
-        objectColour = m_CollidedObject.GetComponent<Renderer>().material.GetColor("_Color");
-        SetRendererColour(objectColour);
+        get { return GetComponent<Renderer>().material.GetColor("_Color"); }
+        set { GetComponent<Renderer>().material.SetColor("_Color", value); }
     }
 
-    void OnCollisionExit() { SetRendererColour(currentColour); }
+    Color32 currentColour;
+    Color32 objectColour;
+    void OnCollisionEnter(Collision collisionTransform)
+    {
+        Transform m_CollidedObject = collisionTransform.transform;
+        currentColour = ColourGetSet;
+        objectColour = m_CollidedObject.GetComponent<Renderer>().material.GetColor("_Color");
+        ColourGetSet = objectColour;
+    }
 
-    private Color32 GetRendererColour() { return GetComponent<Renderer>().material.GetColor("_Color"); }
-    private void SetRendererColour(Color32 newColour) { GetComponent<Renderer>().material.SetColor("_Color", newColour); }
+    void OnCollisionExit() { ColourGetSet = currentColour; }
 }
